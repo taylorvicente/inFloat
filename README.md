@@ -28,11 +28,25 @@ When the float deploys, the electronics detect it with a Hall-effect switch, pow
 ## Repository layout
 
 ```
-esp32.py      Main MicroPython firmware (work in progress)
-firmware/     MicroPython image for the ESP32-S3 (v1.29.0, octal SPIRAM)
+Electronics.kicad_*        Top-level system schematic (KiCad 10)
+SurvivorLight/             Survivor Light LED board (schematic + PCB)
+libraries/
+  inFloat_Custom.pretty/   Custom footprints used by the boards
+Code/
+  esp32.py                 Main MicroPython firmware (work in progress)
+  firmware/                MicroPython image for the ESP32-S3 (v1.29.0, octal SPIRAM)
 ```
 
-## Getting started
+## Hardware design files
+
+The schematics and PCBs are KiCad 10 projects. Before opening them, add the footprint library:
+
+1. In KiCad, open **Preferences → Manage Footprint Libraries**.
+2. Add `libraries/inFloat_Custom.pretty` with the nickname `inFloat_Custom`.
+
+The XIAO ESP32S3 symbol (`Seeed_Studio_XIAO_Series`) comes from the [OPL KiCad Library](https://github.com/Seeed-Studio/OPL_Kicad_Library), so install that as well.
+
+## Firmware: getting started
 
 1. Install the tools: `pip install esptool mpremote`
 2. Flash MicroPython (replace the port with yours):
