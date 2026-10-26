@@ -5,7 +5,7 @@
 # Editor / tooling
 .vscode/
 .idea/
-.claude/settings.local.json
+**/.claude/settings.local.json
 *.swp
 
 # Python / MicroPython
@@ -18,3 +18,17 @@ venv/
 # Local secrets (e.g. SIM / cloud credentials)
 secrets.py
 .env
+
+# KiCad: backups, caches, per-user state, lock/autosave files
+*-backups/
+fp-info-cache
+*.kicad_prl
+*.lck
+\#auto_saved_files#
+_autosave-*
+*.bak
+~*
+
+# Third-party vendor reference files (download from M5Stack)
+M5_Hardware-master/
+M5_Hardware-master.zip

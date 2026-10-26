@@ -39,11 +39,11 @@ firmware/     MicroPython image for the ESP32-S3 (v1.29.0, octal SPIRAM)
    ```sh
    esptool.py --chip esp32s3 --port /dev/cu.usbmodem* erase_flash
    esptool.py --chip esp32s3 --port /dev/cu.usbmodem* write_flash -z 0 \
-     firmware/ESP32_GENERIC_S3-SPIRAM_OCT-20260824-v1.29.0.bin
+     Code/firmware/ESP32_GENERIC_S3-SPIRAM_OCT-20260824-v1.29.0.bin
    ```
 3. Upload and run the firmware:
    ```sh
-   mpremote cp esp32.py :main.py
+   mpremote cp Code/esp32.py :main.py
    mpremote reset
    ```
 
